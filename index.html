@@ -6,12 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Alexandra Brinn Campbell Resume</title>
   <meta name="description" content="Resume of Alexandra Brinn Campbell - AKA Ali. JavaScript and full-stack web developer. I design and script digital experiences for people.">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="application-root"></div>
 
+<script
+  src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
 <script
   src="https://unpkg.com/react@16/umd/react.development.js">
 </script>
@@ -20,7 +21,8 @@
 </script>
 <script>
   const appRoot = document.querySelector('#application-root');
-  ReactDOM.render('Hello from killeraliens', appRoot);
+  const titleH1 = React.createElement('h1', null, 'Alexandra Brinn Campbell');
+  ReactDOM.render(titleH1, appRoot);
 </script>
 </body>
 </html>
