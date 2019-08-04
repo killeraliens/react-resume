@@ -26,20 +26,23 @@
 
   function App(props) {
     console.log(props);
-    console.log(props.children);
-    console.log(props.className);
 
     return (
       <div className={props.className}>
-        {props.children}
+        <Header studentName={props.studentName}/>
+        <SkillsSection />
+        <EmploymentSection />
+        <EducationSection />
+        <ContactSection studentName={props.studentName}/>
+        <Footer />
       </div>
     )
   }
 
-  function Header() {
+  function Header(props) {
     return (
       <header>
-        <h1>Alexandra Brinn Campbell</h1>
+        <h1>{props.studentName}</h1>
         <p>Welcome to my resume. I am a designer who is currently learning the languages of the web. In my freetime I enjoy a minimum of 3 coffees a day, cycle commutes, <b>death metal</b>, and adventures abroad.</p>
       </header>
     )
@@ -108,18 +111,18 @@
   }
 
 
-  function ContactSection() {
+  function ContactSection(props) {
     return(
       <section>
         <header>
           <h2>Contact</h2>
         </header>
-        <img className="avatar" src="./IMG_SbBW0130_L1.jpg" alt="profile photo of Alexandra Campbell"></img>
+        <img className="avatar" src="./IMG_SbBW0130_L1.jpg" alt="profile photo of {props.studentName}"></img>
         <address>
           <ul>
-            <li>Alexandra Brinn Campbell</li>
+            <li>{props.studentName}</li>
             <li>tel: (602)666-6666</li>
-            <li>email:<a href="mailto:alexandrabrinncampbell@gmail.com"> alexandrabrinncampbell@gmail.com</a></li>
+            <li>email:<a href="mailto:{props.studentName}@gmail.com"> {props.studentName}@gmail.com</a></li>
           </ul>
         </address>
       </section>
@@ -146,14 +149,7 @@
 
 
   ReactDOM.render(
-  <App className='resume-page'>
-    <Header />
-    <SkillsSection />
-    <EmploymentSection />
-    <EducationSection />
-    <ContactSection />
-    <Footer />
-  </App>, appRoot
+  <App className='resume-page' studentName='Alexandra Brinn Campbell' />, appRoot
   );
 
 </script>
