@@ -21,14 +21,32 @@
 </script>
 <script type="text/babel">
   const appRoot = document.querySelector('#application-root');
-  const titleH1 = <h1>Alexandra Brinn Campbell</h1>;
+
+
+  function changeColor(el) {
+    el.style.color = 'red';
+  }
+
+  const user1 = {
+    message: `Hi, I'm Alexandra - AKA Ali, and I love designing and scripting digital experiences for people.`,
+    name: `Alexandra Brinn Campbell`,
+    id: 23
+  }
+
+  function Header(props) {
+    console.log(props)
+    return (
+      <div objectprop={props.objectProp} className={props.className}>
+        <h1>{props.objectProp.name}</h1>
+        <p>{props.objectProp.message}</p>
+      </div>
+    );
+  }
 
   ReactDOM.render(
-  <div>
-    {titleH1}
-    <p>Hi, I'm Alexandra - AKA Ali, and I love designing and scripting digital experiences for people.</p>
-  </div>, appRoot
-    );
+  <Header objectProp={user1} className={`user-header`}/>, appRoot
+  );
+
 </script>
 </body>
 </html>
