@@ -19,10 +19,16 @@
 <script
   src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
 </script>
-<script>
+<script type="text/babel">
   const appRoot = document.querySelector('#application-root');
-  const titleH1 = React.createElement('h1', null, 'Alexandra Brinn Campbell');
-  ReactDOM.render(titleH1, appRoot);
+  const titleH1 = <h1>Alexandra Brinn Campbell</h1>;
+
+  ReactDOM.render(
+  <div>
+    {titleH1}
+    <p>Hi, I'm Alexandra - AKA Ali, and I love designing and scripting digital experiences for people.</p>
+  </div>, appRoot
+    );
 </script>
 </body>
 </html>
