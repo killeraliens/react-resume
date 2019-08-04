@@ -1,0 +1,65 @@
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+
+body {
+  /* background-color: rgb(233, 233, 233); */
+  background: radial-gradient( rgb(255, 255, 255),  rgb(233, 233, 233));
+  padding: 30px;
+  font-family: 'Helvetica', 'Arial';
+  line-height: 1.4rem;
+  color: rgb(53, 48, 58);
+  max-width: 600px;
+  margin: 0px auto;
+}
+
+body a {
+  text-decoration: none;
+  color: orangered;
+}
+
+body a:hover, a:focus {
+  color: brown;
+}
+
+body > header {
+  text-align: center;
+}
+
+section {
+  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle();
+  margin-right: 16px;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0px 4px;
+}
+
+footer ul {
+  text-align: center;
+}
+
+footer i {
+  font-size: 24px;
+}
+
+footer i:hover, i:focus {
+  color: brown;
+}
